@@ -24,19 +24,19 @@ public class App {
     	addMenuItem("T-Bone", 500, 1000, false);
     	addMenuItem("Chease Cake", 150, 100, true);
     	
-    	Consumer<MenuItem> menuItemSup = menuItem -> System.out.println(menuItem);
+    	Consumer<MenuItem> menuItemCons = menuItem -> System.out.println(menuItem);
     	
     	List<MenuItem> menuItems = getMenuItems();
-    	menuItems.forEach(menuItemSup);
+    	menuItems.forEach(menuItemCons);
     	System.out.println("Menu items with price between 150 and 900");
     	List<MenuItem> menuItemsWithPrice = getMenuItemsWithPrice(150, 900);
-    	menuItemsWithPrice.forEach(menuItemSup);
+    	menuItemsWithPrice.forEach(menuItemCons);
     	System.out.println("Menu items with discount:");
     	List<MenuItem> menuItemWithDiscount = getMenuItemsWithDiscount();
-    	menuItemWithDiscount.forEach(menuItemSup);
+    	menuItemWithDiscount.forEach(menuItemCons);
     	System.out.println("Menu items with weight under 1 kg:");
     	List<MenuItem> menuItemsUnderOneKg = getMenuItemsUnderOneKg();
-    	menuItemsUnderOneKg.forEach(menuItemSup);
+    	menuItemsUnderOneKg.forEach(menuItemCons);
     }
     public static void addMenuItem(String dishName, int dishWeight, int dishPrice, boolean discount) {
 		
